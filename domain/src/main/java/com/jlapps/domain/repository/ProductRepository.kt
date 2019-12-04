@@ -5,6 +5,6 @@ import io.reactivex.Single
 
 interface ProductRepository {
 
-    fun getProducts(): Single<List<Product>>
+    fun getProducts(forceUpdate: Boolean): Single<List<Product>>
 
 }

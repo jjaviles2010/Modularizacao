@@ -9,8 +9,8 @@ class GetProductsUseCase(
     private val productRepository: ProductRepository,
     private val scheduler: Scheduler
 ) {
-    fun execute(): Single<List<Product>> {
-        return productRepository.getProducts()
+    fun execute(forceUpdate: Boolean): Single<List<Product>> {
+        return productRepository.getProducts(forceUpdate)
             .observeOn(scheduler)
     }
 }
