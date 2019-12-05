@@ -38,6 +38,9 @@ ext {
     //Room version
     roomVersion = '2.1.0'
 
+    //Picasso version
+    picassoVersion = '2.71828'
+
     //Test
     junitVersion = '4.12'
     espressoVersion = '3.1.1'
@@ -72,7 +75,9 @@ ext {
 
             room: "androidx.room:room-runtime:$roomVersion",
             roomRxJava: "androidx.room:room-rxjava2:$roomVersion",
-            roomCompiler: "androidx.room:room-compiler:$roomVersion"
+            roomCompiler: "androidx.room:room-compiler:$roomVersion",
+
+            picasso: "com.squareup.picasso:picasso:$picassoVersion"
     ]
 
     testDependecies = [

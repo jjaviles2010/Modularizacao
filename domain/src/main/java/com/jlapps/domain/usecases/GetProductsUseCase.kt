@@ -11,6 +11,6 @@ class GetProductsUseCase(
 ) {
     fun execute(forceUpdate: Boolean): Single<List<Product>> {
         return productRepository.getProducts(forceUpdate)
-            .observeOn(scheduler)
+            .subscribeOn(scheduler)
     }
 }
