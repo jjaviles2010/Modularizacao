@@ -28,6 +28,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    dynamicFeatures = [":news_feature"]
+
+
 }
 
 dependencies {
@@ -37,8 +40,8 @@ dependencies {
     def dependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependecies
 
-    implementation dependencies.appCompact
-    implementation dependencies.constraintlayout
+    api dependencies.appCompact
+    api dependencies.constraintlayout
 
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.runner
@@ -64,7 +67,9 @@ dependencies {
 
     implementation dependencies.picasso
 
+    implementation dependencies.playCore
+
     kapt dependencies.dataBinding
 
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
-

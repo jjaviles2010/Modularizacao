@@ -1,4 +1,4 @@
-package com.jlapps.modularizacao
+package com.jlapps.modularizacao.features.listProducts
 
 import androidx.lifecycle.MutableLiveData
 import com.jlapps.domain.entity.Product
@@ -10,7 +10,7 @@ import io.reactivex.Scheduler
 import io.reactivex.rxkotlin.plusAssign
 
 
-class MainViewModel(
+class ProductListViewModel(
     val useCase: GetProductsUseCase,
     val uiScheduler: Scheduler
 ): BaseViewModel() {

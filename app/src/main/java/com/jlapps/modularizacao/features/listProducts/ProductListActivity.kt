@@ -1,30 +1,28 @@
-package com.jlapps.modularizacao
+package com.jlapps.modularizacao.features.listProducts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.jlapps.modularizacao.R
 import com.jlapps.modularizacao.databinding.ActivityMainBinding
-import com.jlapps.modularizacao.extensions.visible
 import com.jlapps.modularizacao.viewmodel.ViewState
 import org.koin.android.ext.android.inject
 
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainActivity : AppCompatActivity() {
+class ProductListActivity : AppCompatActivity() {
 
-    private val viewModel: MainViewModel by viewModel()
+    private val viewModel: ProductListViewModel by viewModel()
 
-    private val mainListAdapter : MainListAdapter by inject()
+    private val mainListAdapter : ProductListAdapter by inject()
 
     private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_productList)
 
         binding.viewModel = viewModel
 

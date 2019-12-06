@@ -1,15 +1,16 @@
-package com.jlapps.modularizacao
+package com.jlapps.modularizacao.features.listProducts
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jlapps.domain.entity.Product
+import com.jlapps.modularizacao.R
 import com.jlapps.modularizacao.extensions.inflate
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.product_row.view.*
 
-class MainListAdapter(
+class ProductListAdapter(
     private val picasso: Picasso
-) : RecyclerView.Adapter<MainListAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<ProductListAdapter.ViewHolder>() {
 
     var products: List<Product> = listOf()
 
